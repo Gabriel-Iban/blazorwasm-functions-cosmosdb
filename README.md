@@ -4,11 +4,13 @@ En este repositorio iré dejando las instrucciones para crear una aplicación de
 Hay un fichero configuracionMaquina.ps1 en el que dejo los paso para configurar la máquina de desarrollo. Se han probado en la máquina virtual de microsoft de desarrollo que se puede ejecutar con Hyper-v.
 Otro fichero con los primeros pasos para crear los proyectos que describo aquí:
 
+Habría que fijar estas dos variables
 <code>
-#creación del los proyectos
-$NombreComun="ejemplo3"
+$NombreComun="ejemplo4"
 $UsuarioGitHub ="Gabriel-Iban"
-
+</code>
+Y ejecutar todo esto o copiarlo y pegarlo
+<code>
 $NombreCliente=$NombreComun + "BlazorWasm"
 $NombreApi=$NombreComun + "Api"
 $NombreModel=$NombreComun + "Model"
