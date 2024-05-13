@@ -1,4 +1,5 @@
 # Instalación de la máquina
+# Configurar en castellano
 New-WinUserLanguageList es-ES
 Set-WinUserLanguageList -LanguageList es-ES -Force
 
