@@ -1,6 +1,13 @@
 #creación del los proyectos
-$NombreComun="ejemplo3"
-$UsuarioGitHub ="Gabriel-Iban"
+#$NombreComun="ejemplo3"
+#$UsuarioGitHub ="Gabriel-Iban"
+
+if(( $null -eq $NombreComun) -or ($null -eq $UsuariosGitHub)){
+    $NombreComun = Read-Host "Nombre común de los proyectos"
+    $UsuarioGitHub = Read-Host "Nombre de Usuario de GitHub"
+    $DirectorioDondeSeCrearanLosProyectos = Read-Host "Directorio con la ruta completa donde se crearán los proyectos"
+    cd $DirectorioDondeSeCrearanLosProyectos
+}
 
 $NombreCliente=$NombreComun + "BlazorWasm"
 $NombreApi=$NombreComun + "Api"
@@ -21,6 +28,9 @@ dotnet new gitignore
 dotnet new classlib
 dotnet new class --name Weather
 dotnet sln add .
+git add .
+git commit -m"Commit inicial"
+git push
 cd ..
 #Cliente blazorwasm
 cd $NombreCliente
@@ -28,7 +38,8 @@ dotnet new sln
 dotnet new gitignore
 dotnet new blazorwasm -o $NombreCliente
 dotnet sln add $NombreCliente
-dotnet sln add ..\$NombreModel
+git submodule add https://github.com/$UsuarioGitHub/$NombreModel.git $NombreModel
+dotnet sln add $NombreModel
 cd ..
 
 #Api con functions
@@ -41,5 +52,6 @@ func init --worker-runtime dotnet-isolated --language c#-isolated
 func function new --name GetWeather --authlevel anonymous --template HttpTrigger
 cd ..
 dotnet sln add $NombreApi
-dotnet sln add ..\$NombreModel
+git submodule add https://github.com/$UsuarioGitHub/$NombreModel.git $NombreModel
+dotnet sln add $NombreModel
 cd ..
