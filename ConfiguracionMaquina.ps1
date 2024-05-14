@@ -20,11 +20,6 @@ winget install -e --id Microsoft.VisualStudioCode
 #Para que se puedan crear funciones de azure
 winget install -e --id Microsoft.Azure.FunctionsCoreTools
 
-#Parece compilar sin acceder a paquetes fuera. Esto añade otro origen de paquetes
-dotnet nuget add source https://api.nuget.org/v3/index.json -n nuget.org
-#Se puede ver con dotnet nuget list source
-
-
 #Estoy hay que hacerlo interactivo
 gh auth login
 
