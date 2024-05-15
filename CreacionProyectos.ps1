@@ -40,6 +40,9 @@ dotnet new blazorwasm -o $NombreCliente
 dotnet sln add $NombreCliente
 git submodule add https://github.com/$UsuarioGitHub/$NombreModel.git $NombreModel
 dotnet sln add $NombreModel
+git add .
+git commit -m"Commit inicial"
+git push
 cd ..
 
 #Api con functions
@@ -54,4 +57,7 @@ cd ..
 dotnet sln add $NombreApi
 git submodule add https://github.com/$UsuarioGitHub/$NombreModel.git $NombreModel
 dotnet sln add $NombreModel
+git add .
+git commit -m"Commit inicial"
+git push
 cd ..
