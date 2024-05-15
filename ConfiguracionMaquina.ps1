@@ -17,6 +17,9 @@ winget install -e --id GitHub.cli
 #Code por si acaso
 winget install -e --id Microsoft.VisualStudioCode
 
+#Chrome por el plugin de azure
+winget install -e --id Google.Chrome
+
 #Para que se puedan crear funciones de azure
 winget install -e --id Microsoft.Azure.FunctionsCoreTools
 
@@ -28,5 +31,5 @@ git config --global user.email "you@example.com"
 git config --global user.name "Gabriel-Iban"
 
 #Creamos un directorio en C: para guardar la programación
-md c:/pro
-cd c:/pro
+mkdir c:/pro
+Set-Location c:/pro
