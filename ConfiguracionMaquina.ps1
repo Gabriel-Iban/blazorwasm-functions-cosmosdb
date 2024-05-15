@@ -23,6 +23,9 @@ winget install -e --id Microsoft.Azure.FunctionsCoreTools
 #Estoy hay que hacerlo interactivo
 gh auth login
 
+#aquí tienes que poner tus datos
+git config --global user.email "you@example.com"
+git config --global user.name "Gabriel-Iban"
 
 #Creamos un directorio en C: para guardar la programación
 md c:/pro
