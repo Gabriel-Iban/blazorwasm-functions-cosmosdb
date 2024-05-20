@@ -11,6 +11,10 @@ Para trabajar con creacionProyectos.ps1 hay que tener instalado y configurado gi
 
 Inicialmente este script creaba 3 repositorios en github pero al subir los proyectos en azure da problemas con los submodulos de git (que por cierto no es la primera vez que me dan problemas los submodulos) así que, como "solución" o más bien "parche" de compromiso creo dos. Servidor y cliente. Los ficheros de "Model" que serían comunes se copiarán desde el proyecto de servidor al proyecto de cliente para poderlos utilizar.
 
+Para trabajar con creacionProyectos.ps1 hay que tener instalado y configurado github-cli
+
+Inicialmente este script creaba 3 repositorios en github pero al subir los proyectos en azure da problemas con los submodulos de git (que por cierto no es la primera vez que me dan problemas los submodulos) así que, como "solución" o más bien "parche" de compromiso creo dos. Servidor y cliente. Los ficheros de "Model" que serían comunes se copiarán desde el proyecto de servidor al proyecto de cliente para poderlos utilizar.
+
 Es necesario tener un proyecto github independiente para blazor y otro para functions por la manera en que se suben a Azure.
 
 En una StaticWebApplication de Azure se puede incluir una api pero lo estamos haciendo de forma externa para acercarnos más a cómo se haría en la realidad. Es decir, con herramientas gratuitas pero que se parezcan los máximo posible a las soluciones de pago que realmente se usarían.
