@@ -33,7 +33,7 @@ Set-Location ..
 Set-Location $Env:NombreCliente
 dotnet new sln
 dotnet new gitignore
-dotnet new blazorwasm -o $Env:NombreCliente
+dotnet new blazorwasm -o "Client"
 dotnet sln add $Env:NombreCliente
 
 mkdir $Env:NombreModel
