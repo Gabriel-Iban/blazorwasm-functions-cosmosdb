@@ -3,6 +3,7 @@
 New-WinUserLanguageList es-ES
 Set-WinUserLanguageList -LanguageList es-ES -Force
 get-timezone -ListAvailable | Where-Object DisplayName -like "*Madrid*" | Set-TimeZone
+set-WinHomeLocation -GeoId 217
 
 #ejecutar como administrador
 

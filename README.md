@@ -40,17 +40,4 @@ Una vez creadas las soluciones...
 
 #Crear Infraestructura en Azure
 
-Hay que tener creadas las variables de:
-$UsuarioGitHub
-$NombreCliente
-$NombreApi
-
-install-module -Name az
-
-connect-AzAccount -SubscriptionId [tu-id-de-subscripción]
-
-$staticWebApp = New-AzStaticWebApp -ResourceGroupName $resourcegroup -Name 'borrame1827328' -Location $location -RepositoryUrl "https://github.com/$UsuarioGitHub/$NombreCliente.git" -Branch "master" -AppLocation 'Client' -ApiLocation 'Api' -OutputLocation 'wwwroot' -SkuName 'Free'
-
-Write-Host $staticWebApp.DefaultHostname
-
 
