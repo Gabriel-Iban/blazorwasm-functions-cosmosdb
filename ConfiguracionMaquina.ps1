@@ -1,7 +1,8 @@
 # Instalación de la máquina
-# Configurar en castellano
+# Configurar en castellano de España
 New-WinUserLanguageList es-ES
 Set-WinUserLanguageList -LanguageList es-ES -Force
+get-timezone -ListAvailable | Where-Object DisplayName -like "*Madrid*" | Set-TimeZone
 
 #ejecutar como administrador
 
