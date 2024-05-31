@@ -34,7 +34,7 @@ Abrimos la Función en el proyecto Api y aquí, extrañamente hay muchas cosas q
 Recomiendo copiar los ficheros de este mismo proyecto para no teclear errores que puedan ser difíciles de detectar.
 ## En GetWeather.cs
 
-'''
+```C#
 using Microsoft.AspNetCore.Http;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Extensions.Logging;
@@ -104,7 +104,7 @@ Yo diría, además de los using que lo más relevante es el cambio de los parám
 Ahora devuelve un IActionResult que es la respuesta que normalmente se usa en Asp.net core.
 
 ## en Program.cs hay que cambiar ConfigureFunctionsWorkerDefaults por ConfigureFunctionsWebApplication
-```
+```C#
 using Microsoft.Extensions.Hosting;
 
 var host = new HostBuilder()
@@ -119,7 +119,7 @@ host.Run();
 
 Y por supuesto CORS.
 
-```
+```json
 {
     "IsEncrypted": false,
     "Values": {
